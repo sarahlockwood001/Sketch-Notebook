@@ -837,25 +837,7 @@ com.notebook = {
         return textLayer;
     },
 
-    getMetadata: function(){
-
-        var name = ([doc displayName]).split('.sketch')[0],
-            author = NSUserName(),
-            objToday = new Date(),
-            day = objToday.getDay(),
-            day = (day > 9) ? day : "0"+day,
-            month = objToday.getMonth(),
-            yr = objToday.getFullYear(),
-            date = day+"/"+month+"/"+yr;
-
-        var meta = {
-            name : name,
-            date : date,
-            author : author
-        };
-
-        return meta;
-    },
+    
 
     generateAssets: function(){
         this.debugLog("generating assets")
@@ -890,8 +872,7 @@ com.notebook = {
         var bg = this.addRect(sidebar,'sidebar-bg', sc.bg, sc.width, sc.height, sc.x, sc.y);
         this.storeStyle(bg,"sidebar:bg");
 
-        
-        
+           
     
     // Create comment
         // group
